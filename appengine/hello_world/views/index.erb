@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Greeting Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="col-md-12">
+      <br>
+      <h2 class="col-d-8" style="margin-left:25%;margin-right:20%;">Naives Bayes Prediction using Existing Trained Data</h2>
+      
+      <br>
+
+      <form action="/" method="post" class="col-md-8" style="margin-left:20%;margin-right:20%;">
+          <div class="form-group col-md-12">
+      		  <input type="text" name="data" class="form-control col-md-8 pull-left">
+          </div>
+          <div class="form-group col-md-12">
+            <input type="submit" class="btn btn-primary col-md-4 pull-left form-control">
+          </div>
+    	</form>
+    		
+      <br>  
+      
+      <% if @b != nil %>
+        	<p class="col-md-8" style="margin-left:25%;margin-right:20%;"> Predicted Salary is : <% @c = @a.classify(*@b) %> <%= @c[0] %> ,  <%= @c[1] %> </p>
+      <% end %>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
+</html>
